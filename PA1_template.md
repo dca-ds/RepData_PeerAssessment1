@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 
@@ -118,7 +123,7 @@ ggplot(totalSteps, aes(x=steps)) +
         labs(title="Total Number of Steps Taken Each Day", x="Total Steps per Day", y="Frequency")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
 
 3. Calculate and report the mean and median of the total number of steps taken per day:
 
@@ -144,7 +149,7 @@ medianSteps
 ## [1] 10765
 ```
 
-_The mean and median of the total number of steps taken per day are 1.0766189\times 10^{4} and 10765, respectively._
+_The mean and median of the total number of steps taken per day are 1.0766189 &times; 10<sup>4</sup> and 10765, respectively._
 
 ## What is the average daily activity pattern?
 
@@ -177,7 +182,7 @@ g + geom_line(color='blue') +
     ggtitle('Average Number of Steps vs 5-Minute Interval')
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -273,7 +278,7 @@ ggplot(totalSteps2, aes(x=steps)) +
         labs(title="Total Steps Taken Each Day - NAs replaced by Daily Average", x="Total Steps per Day", y="Frequency")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
 
 
 ```r
@@ -305,7 +310,7 @@ medianSteps2
 pctChangeMedian <- 100*(medianSteps2 - medianSteps)/medianSteps
 ```
 
-_The new mean and median number of steps per day (after replacing NA values) are 1.0889799\times 10^{4} and 1.1015\times 10^{4}.  The old mean and median number of steps per day were 1.0766189\times 10^{4} and 10765._
+_The new mean and median number of steps per day (after replacing NA values) are 1.0889799 &times; 10<sup>4</sup> and 1.1015 &times; 10<sup>4</sup>.  The old mean and median number of steps per day were 1.0766189 &times; 10<sup>4</sup> and 10765._
 
 _Replacing the NA values with the average for the interval changed the mean value by 1.1481368% and the median value by 2.3223409%._
 
@@ -337,7 +342,7 @@ g <- ggplot(weekdayOrEndMeans, aes(x=interval, y=steps, color=weekdayOrEnd)) + g
 plot(g)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
+![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16-1.png)
 
 _The panel plots show similar, but slightly varied shapes for weekends vs weekdays._
 
